@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolfgang GA100 - La Vérité sur le Mode Webcam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: rgba(0,0,0,0.8);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+        }
+        
+        .warning-box {
+            background-color: rgba(255, 107, 107, 0.3);
+            border: 3px solid #ff6b6b;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .warning-box h2 {
+            font-size: 2em;
+            margin-top: 0;
+            color: #ff6b6b;
+        }
+        
+        .solution {
+            background-color: rgba(46, 204, 113, 0.2);
+            border-left: 5px solid #2ecc71;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .solution h3 {
+            color: #2ecc71;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .option {
+            background-color: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid transparent;
+        }
+        
+        .option.best {
+            border-color: #f39c12;
+            position: relative;
+        }
+        
+        .option.best::before {
+            content: "⭐ RECOMMANDÉ";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f39c12;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        .option h4 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        
+        .price {
+            font-size: 2em;
+            color: #f39c12;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+        }
+        
+        .pros-cons {
+            margin-top: 15px;
+        }
+        
+        .pros-cons ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .pros-cons li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .pros-cons li.pro::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+        
+        .pros-cons li.con::before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+        }
+        
+        .diagram {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .step-by-step {
+            background-color: rgba(52, 152, 219, 0.2);
+            border: 2px solid #3498db;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+        
+        .step {
+            background-color: rgba(0,0,0,0.3);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎥 WOLFGANG GA100 - MODE WEBCAM</h1>
+        
+        <div class="warning-box">
+            <h2>⚠️ INFORMATION IMPORTANTE</h2>
+            <p style="font-size: 1.3em; line-height: 1.6;">
+                Le <strong>Wolfgang GA100</strong> est une <strong>caméra d'action</strong> (Action Cam).<br>
+                Il <strong>N'A PAS</strong> de mode webcam USB natif comme les vraies webcams.
+            </p>
+            <p style="font-size: 1.1em; margin-top: 20px;">
+                ❌ Pas de "PC Camera Mode" via USB<br>
+                ❌ Pas de pilote UVC (USB Video Class)<br>
+                ✅ Seulement mode "Mass Storage" (stockage USB)
+            </p>
+        </div>
+
+        <h2 style="text-align: center; color: #3498db; margin-top: 50px;">
+            💡 COMMENT UTILISER WOLFGANG GA100 COMME WEBCAM ?
+        </h2>
+
+        <div class="comparison">
+            <!-- Option 1: Carte de capture -->
+            <div class="option best">
+                <h4>🏆 OPTION 1: Carte de Capture HDMI</h4>
+                <div class="price">20-150€</div>
+                
+                <div class="diagram">
+Wolfgang GA100<br>
+    │<br>
+    │ (HDMI)<br>
+    ▼<br>
+Carte Capture<br>
+    │<br>
+    │ (USB)<br>
+    ▼<br>
+PC (Webcam)
+                </div>
+                
+                <div class="pros-cons">
+                    <strong>Avantages:</strong>
+                    <ul>
+                        <li class="pro">Qualité excellente (1080p-4K)</li>
+                        <li class="pro">Pas de latence</li>
+                        <li class="pro">Plug & Play</li>
+                        <li class="pro">Pro niveau</li>
+                    </ul>
+                    
+                    <strong>Inconvénients:</strong>
+                    <ul>
+                        <li class="con">Coût matériel</li>
+                        <li class="con">Câbles requis</li>
+                    </ul>
+                </div>
+                
+                <button onclick="showHdmiGuide()">📖 Voir le Guide</button>
+            </div>
+
+            <!-- Option 2: WiFi + OBS -->
+            <div class="option">
+                <h4>📡 OPTION 2: WiFi + OBS</h4>
+                <div class="price">GRATUIT</div>
+                
+                <div class="diagram">
+Wolfgang GA100<br>
+    │<br>
+    │ (WiFi)<br>
+    ▼<br>
+PC + OBS<br>
+    │<br>
+    │ (Virtual Cam)<br>
+    ▼<br>
+Zoom/Teams
+                </div>
+                
+                <div class="pros-cons">
+                    <strong>Avantages:</strong>
+                    <ul>
+                        <li class="pro">Gratuit</li>
+                        <li class="pro">Sans fil</li>
+                        <li class="pro">Pas de matériel</li>
+                    </ul>
+                    
+                    <strong>Inconvénients:</strong>
+                    <ul>
+                        <li class="con">Latence 1-3 sec</li>
+                        <li class="con">Qualité réduite</li>
+                        <li class="con">Moins stable</li>
+                        <li class="con">Pas d'internet PC</li>
+                    </ul>
+                </div>
+                
+                <button onclick="showWifiGuide()">📖 Voir le Guide</button>
+            </div>
+        </div>
+
+        <!-- Guide Carte de Capture -->
+        <div id="hdmiGuide" class="step-by-step" style="display: none;">
+            <h3>📋 GUIDE: Carte de Capture HDMI</h3>
+            
+            <div class="step">
+                <strong>ÉTAPE 1: Acheter une carte de capture</strong><br>
+                Recommandations:
+                <ul>
+                    <li>Budget: Carte générique USB 3.0 (20-40€)</li>
+                    <li>Qualité: Elgato Cam Link 4K (130€)</li>
+                    <li>Alternative: AVerMedia Live Gamer (80€)</li>
+                </ul>
+                Où: Amazon, LDLC, Boulanger, AliExpress
+            </div>
+            
+            <div class="step">
+                <strong>ÉTAPE 2: Connecter le matériel</strong><br>
+                1. Wolfgang HDMI → Carte de capture HDMI<br>
+                2. Carte de capture USB → PC<br>
+                3. Allumer Wolfgang
+            </div>
+            
+            <div class="step">
+                <strong>ÉTAPE 3: Configuration Wolfgang</strong><br>
+                • Menu → HDMI Output → Live View<br>
+                • Menu → Display → OSD → Off (enlever affichage écran)
+            </div>
+            
+            <div class="step">
+                <strong>ÉTAPE 4: Test sur PC</strong><br>
+                Windows détecte automatiquement la carte comme webcam!<br>
+                Test: App Caméra Windows ou Zoom/Teams
+            </div>
+            
+            <p style="margin-top: 20px; text-align: center; font-weight: bold; color: #2ecc71;">
+                ✅ C'est tout! Wolfgang fonctionne comme une vraie webcam professionnelle!
+            </p>
+        </div>
+
+        <!-- Guide WiFi -->
+        <div id="wifiGuide" class="step-by-step" style="display: none;">
+            <h3>📋 GUIDE: WiFi + OBS (Gratuit)</h3>
+            
+            <div class="step">
+                <strong>ÉTAPE 1: Activer WiFi Wolfgang</strong><br>
+                1. Wolfgang → MENU → WiFi → ON<br>
+                2. Notez SSID et mot de passe affichés
+            </div>
+            
+            <div class="step">
+                <strong>ÉTAPE 2: Connecter PC au WiFi Wolfgang</strong><br>
+                1. Cliquez icône WiFi Windows<br>
+                2. Trouvez réseau Wolfgang<br>
+                3. Connectez avec mot de passe<br>
+                ⚠️ Vous perdrez internet temporairement
+            </div>
+            
+            <div class="step">
+                <strong>ÉTAPE 3: Accéder au Live View</strong><br>
+                Ouvrez navigateur, essayez:<br>
+                • http://192.168.1.1<br>
+                • http://192.168.0.1<br>
+                • http://192.168.42.1<br>
+                Cherchez "Live View" dans interface
+            </div>
+            
+            <div class="step">
+                <strong>ÉTAPE 4: Installer OBS Studio</strong><br>
+                1. Téléchargez sur https://obsproject.com/<br>
+                2. Installez (gratuit)<br>
+                3. Lancez OBS
+            </div>
+            
+            <div class="step">
+                <strong>ÉTAPE 5: Capturer Wolfgang dans OBS</strong><br>
+                1. Sources → + → Capture de fenêtre<br>
+                2. Sélectionnez fenêtre navigateur avec Wolfgang<br>
+                3. Ajustez la zone
+            </div>
+            
+            <div class="step">
+                <strong>ÉTAPE 6: Activer Virtual Camera</strong><br>
+                1. OBS → Outils → Démarrer la caméra virtuelle<br>
+                2. Dans Zoom/Teams: Caméra → OBS Virtual Camera
+            </div>
+            
+            <p style="margin-top: 20px; text-align: center; font-weight: bold; color: #3498db;">
+                ✅ Wolfgang visible dans vos apps! (avec latence)
+            </p>
+        </div>
+
+        <!-- Tableau comparatif -->
+        <h2 style="text-align: center; color: #f39c12; margin-top: 50px;">
+            📊 COMPARAISON RAPIDE
+        </h2>
+
+        <table style="width: 100%; border-collapse: collapse; margin: 30px 0;">
+            <thead>
+                <tr style="background-color: rgba(52, 152, 219, 0.3);">
+                    <th style="padding: 15px; border: 1px solid #3498db;">Critère</th>
+                    <th style="padding: 15px; border: 1px solid #3498db;">Carte HDMI</th>
+                    <th style="padding: 15px; border: 1px solid #3498db;">WiFi + OBS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #555;">Prix</td>
+                    <td style="padding: 15px; border: 1px solid #555;">20-150€</td>
+                    <td style="padding: 15px; border: 1px solid #555; color: #2ecc71; font-weight: bold;">GRATUIT</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #555;">Qualité vidéo</td>
+                    <td style="padding: 15px; border: 1px solid #555; color: #2ecc71; font-weight: bold;">⭐⭐⭐⭐⭐</td>
+                    <td style="padding: 15px; border: 1px solid #555;">⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #555;">Latence</td>
+                    <td style="padding: 15px; border: 1px solid #555; color: #2ecc71; font-weight: bold;">Aucune</td>
+                    <td style="padding: 15px; border: 1px solid #555; color: #e74c3c;">1-3 secondes</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #555;">Stabilité</td>
+                    <td style="padding: 15px; border: 1px solid #555; color: #2ecc71; font-weight: bold;">Excellente</td>
+                    <td style="padding: 15px; border: 1px solid #555;">Moyenne</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #555;">Installation</td>
+                    <td style="padding: 15px; border: 1px solid #555; color: #2ecc71; font-weight: bold;">Plug & Play</td>
+                    <td style="padding: 15px; border: 1px solid #555;">Configuration</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #555;">Usage Pro</td>
+                    <td style="padding: 15px; border: 1px solid #555; color: #2ecc71; font-weight: bold;">✅ Oui</td>
+                    <td style="padding: 15px; border: 1px solid #555; color: #e74c3c;">❌ Non</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <h3>🤔 Quelle option choisir?</h3>
+            <p style="font-size: 1.2em;">
+                <strong>Streaming/Visio régulier:</strong> Carte de capture HDMI 🏆<br>
+                <strong>Test occasionnel:</strong> WiFi + OBS 💡<br>
+                <strong>Enregistrement seulement:</strong> Utilisez Wolfgang normalement (carte SD)
+            </p>
+        </div>
+
+        <div style="background-color: rgba(241, 196, 15, 0.2); border: 2px solid #f1c40f; padding: 20px; border-radius: 10px; margin-top: 30px;">
+            <h3 style="color: #f1c40f; margin-top: 0;">💡 CONSEIL FINAL</h3>
+            <p style="font-size: 1.1em;">
+                Si vous utilisez Wolfgang GA100 régulièrement comme webcam, investissez dans une <strong>carte de capture HDMI à 20-40€</strong>. 
+                C'est la solution la plus simple et professionnelle. La qualité est incomparable!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function showHdmiGuide() {
+            const guide = document.getElementById('hdmiGuide');
+            const wifiGuide = document.getElementById('wifiGuide');
+            
+            if (guide.style.display === 'none') {
+                guide.style.display = 'block';
+                wifiGuide.style.display = 'none';
+                guide.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                guide.style.display = 'none';
+            }
+        }
+
+        function showWifiGuide() {
+            const guide = document.getElementById('wifiGuide');
+            const hdmiGuide = document.getElementById('hdmiGuide');
+            
+            if (guide.style.display === 'none') {
+                guide.style.display = 'block';
+                hdmiGuide.style.display = 'none';
+                guide.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                guide.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

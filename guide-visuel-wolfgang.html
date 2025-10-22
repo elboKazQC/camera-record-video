@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolfgang GA100 - Où Trouver le Mode Webcam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(0,0,0,0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .method {
+            background-color: rgba(255,255,255,0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .method h2 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        
+        .steps {
+            background-color: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .step {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 5px;
+            border-left: 3px solid #61dafb;
+        }
+        
+        .menu-tree {
+            font-family: 'Courier New', monospace;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .success {
+            background-color: rgba(76, 175, 80, 0.3);
+            border: 2px solid #4CAF50;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .warning {
+            background-color: rgba(255, 152, 0, 0.3);
+            border: 2px solid #ff9800;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            display: inline-block;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .highlight {
+            background-color: yellow;
+            color: black;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎥 Wolfgang GA100 - Mode Webcam</h1>
+        
+        <div class="warning">
+            <span class="emoji">⚠️</span>
+            <strong>Important :</strong> Wolfgang GA100 doit être configuré en mode "PC Camera" pour fonctionner comme webcam.
+        </div>
+
+        <!-- MÉTHODE 1 -->
+        <div class="method">
+            <h2><span class="emoji">📋</span>Méthode 1 : Via le Menu (RECOMMANDÉ)</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <strong>1.</strong> Allumez votre Wolfgang GA100
+                </div>
+                <div class="step">
+                    <strong>2.</strong> Appuyez sur le bouton <span class="highlight">MENU</span> (ou bouton ⚙️ paramètres)
+                </div>
+                <div class="step">
+                    <strong>3.</strong> Naviguez avec les boutons ⬆️ ⬇️
+                </div>
+                <div class="step">
+                    <strong>4.</strong> Cherchez dans cet ordre :
+                    <div class="menu-tree">
+📂 <span style="color: #61dafb;">Setup</span> / <span style="color: #61dafb;">Paramètres</span> / <span style="color: #61dafb;">Settings</span>
+   │
+   ├── 📹 Video Settings
+   ├── 📸 Photo Settings
+   ├── 🔌 <span style="color: #4CAF50; font-weight: bold;">USB Mode</span> ← CHERCHEZ ICI
+   │     │
+   │     ├── 💾 Mass Storage (Stockage) ❌ NE PAS CHOISIR
+   │     └── 📹 <span class="highlight">PC Camera / UVC Mode</span> ✅ CHOISIR CECI
+   │
+   ├── 📡 WiFi Settings
+   └── 🔧 System
+                    </div>
+                </div>
+                <div class="step">
+                    <strong>5.</strong> Sélectionnez <span class="highlight">PC Camera</span> ou <span class="highlight">UVC Mode</span>
+                </div>
+                <div class="step">
+                    <strong>6.</strong> Validez avec le bouton OK/SELECT
+                </div>
+            </div>
+        </div>
+
+        <!-- MÉTHODE 2 -->
+        <div class="method">
+            <h2><span class="emoji">🔌</span>Méthode 2 : Connexion Automatique</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <strong>1.</strong> <strong>Éteignez</strong> Wolfgang GA100
+                </div>
+                <div class="step">
+                    <strong>2.</strong> <strong>Branchez le câble USB-C</strong> entre Wolfgang et votre PC
+                </div>
+                <div class="step">
+                    <strong>3.</strong> <strong>Allumez Wolfgang</strong> (pendant qu'il est connecté)
+                </div>
+                <div class="step">
+                    <strong>4.</strong> Wolfgang peut démarrer automatiquement en mode PC Camera
+                </div>
+            </div>
+        </div>
+
+        <!-- MÉTHODE 3 -->
+        <div class="method">
+            <h2><span class="emoji">🎮</span>Méthode 3 : Raccourci Boutons</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <strong>Option A :</strong> Wolfgang éteint → Maintenez <span class="highlight">MODE + POWER</span> simultanément
+                </div>
+                <div class="step">
+                    <strong>Option B :</strong> Wolfgang allumé et connecté → Appuyez <span class="highlight">3 fois</span> rapidement sur bouton MODE
+                </div>
+            </div>
+        </div>
+
+        <!-- AUTRES EMPLACEMENTS -->
+        <div class="method">
+            <h2><span class="emoji">🔍</span>Autres Emplacements Possibles</h2>
+            
+            <div class="menu-tree">
+📂 System / Système
+   └── 🔌 USB Setting
+       └── <span class="highlight">Camera Mode</span> ✅
+
+📂 Connection / Connexion
+   └── 🔌 USB Mode
+       └── <span class="highlight">PC Camera</span> ✅
+
+📂 Advanced / Avancé
+   └── USB Config
+       └── <span class="highlight">UVC Mode</span> ✅
+            </div>
+        </div>
+
+        <!-- VÉRIFICATION -->
+        <div class="success">
+            <h3><span class="emoji">✅</span>Comment savoir que ça fonctionne ?</h3>
+            <ul>
+                <li><strong>Sur Wolfgang :</strong> Écran affiche "PC Camera" ou "UVC" ou icône 🎥</li>
+                <li><strong>Sur Windows :</strong> Son "ding-dong" de connexion USB</li>
+                <li><strong>Gestionnaire de périphériques :</strong> Wolfgang apparaît sous "Caméras"</li>
+            </ul>
+        </div>
+
+        <!-- BOUTONS D'ACTION -->
+        <div style="text-align: center; margin-top: 30px;">
+            <button onclick="window.location.href='test-wolfgang-simple.html'">
+                🧪 Tester la Détection
+            </button>
+            <button onclick="openDeviceManager()">
+                ⚙️ Gestionnaire de Périphériques
+            </button>
+            <button onclick="openCamera()">
+                📹 App Caméra Windows
+            </button>
+        </div>
+
+        <!-- DÉPANNAGE -->
+        <div class="warning" style="margin-top: 30px;">
+            <h3><span class="emoji">🚨</span>Toujours pas trouvé ?</h3>
+            <ol>
+                <li>Vérifiez la <strong>version firmware</strong> de Wolfgang (Menu → System → Info)</li>
+                <li>Certaines versions anciennes peuvent ne pas avoir le mode webcam</li>
+                <li>Consultez le manuel PDF : cherchez "USB" avec Ctrl+F</li>
+                <li>Le mode peut s'appeler différemment selon la langue/firmware</li>
+                <li>Essayez la mise à jour firmware sur le site Wolfgang</li>
+            </ol>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; padding: 20px; background-color: rgba(255,255,255,0.1); border-radius: 8px;">
+            <p><strong>💡 Conseil :</strong> Si vous voyez votre Wolfgang dans le Gestionnaire de périphériques mais pas l'option dans le menu, c'est que le mode par défaut est peut-être déjà bon. Testez simplement la connexion !</p>
+        </div>
+    </div>
+
+    <script>
+        function openDeviceManager() {
+            alert('Ouvrez le Gestionnaire de périphériques :\n\n1. Appuyez sur Win+R\n2. Tapez : devmgmt.msc\n3. Cliquez OK\n\nCherchez Wolfgang sous "Caméras" ou "Périphériques d\'imagerie"');
+        }
+
+        function openCamera() {
+            alert('Ouvrez l\'application Caméra :\n\n1. Appuyez sur Win+R\n2. Tapez : ms-camera:\n3. Cliquez OK');
+        }
+    </script>
+</body>
+</html>
