@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horodatage pour OBS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: transparent;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        #timestamp {
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-size: 32px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .date {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .time {
+            font-size: 48px;
+            letter-spacing: 2px;
+        }
+
+        /* Styles alternatifs - décommentez celui que vous préférez */
+        
+        /* Style compact */
+        .compact {
+            font-size: 28px;
+        }
+
+        /* Style avec fond semi-transparent */
+        .with-background {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px 25px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        /* Style néon */
+        .neon {
+            color: #00ff00;
+            text-shadow: 
+                0 0 5px #00ff00,
+                0 0 10px #00ff00,
+                0 0 20px #00ff00,
+                0 0 40px #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div id="timestamp">
+        <div class="date" id="date"></div>
+        <div class="time" id="time"></div>
+    </div>
+
+    <script>
+        // Configuration
+        const config = {
+            locale: 'fr-FR',
+            dateFormat: {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            },
+            timeFormat: {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            }
+        };
+
+        function updateTimestamp() {
+            const now = new Date();
+            
+            // Mise à jour de la date
+            const dateString = now.toLocaleDateString(config.locale, config.dateFormat);
+            document.getElementById('date').textContent = dateString;
+            
+            // Mise à jour de l'heure
+            const timeString = now.toLocaleTimeString(config.locale, config.timeFormat);
+            document.getElementById('time').textContent = timeString;
+        }
+
+        // Mise à jour immédiate
+        updateTimestamp();
+
+        // Mise à jour toutes les secondes
+        setInterval(updateTimestamp, 1000);
+
+        // Styles additionnels appliqués au chargement
+        // Décommentez la ligne souhaitée pour changer le style :
+        
+        // document.getElementById('timestamp').classList.add('with-background');
+        // document.getElementById('timestamp').classList.add('neon');
+    </script>
+</body>
+</html>
